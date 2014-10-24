@@ -115,6 +115,7 @@ Message = (method, uri, headers, body, host, user)->
 		cseq: {seq: 1, method: @method}
 	}
 	@headers = _.defaults(headers, defaultHeaders)
+	@content = body
 	return this
 
 Message.prototype.inc_cseq= ()->
